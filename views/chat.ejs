@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ứng dụng Chat</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <input type="hidden" id="current-user-id" value="<%= currentUser.id %>">
+    
+    <div class="chat-container">
+        <div class="user-list-sidebar">
+            <h3>Xin chào, <%= currentUser.username %>!</h3>
+            <h2>Người dùng</h2>
+            <ul id="user-list">
+                </ul>
+        </div>
+        
+        <div class="chat-main">
+            <h3 id="chat-window-header">Chọn người để bắt đầu chat</h3>
+            <div id="messages" class="messages-area">
+                </div>
+            <div class="message-input-area">
+                <input type="text" id="message-input" placeholder="Nhập tin nhắn...">
+                <button id="send-button">Gửi</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
