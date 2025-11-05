@@ -15,12 +15,12 @@ const Message = require('./models/Message');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server, { cors: { origin: "*" } }); 
-const JWT_SECRET = 'your_super_secret_key'; 
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // --- 2. KẾT NỐI DB VÀ MIDDLEWARE ---
 
 // Kết nối DB (Kiểm tra xem MongoDB Server đang chạy)
-mongoose.connect('mongodb://localhost:27017/chatappdb')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log('MongoDB connection error:', err));
 
