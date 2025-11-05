@@ -17,6 +17,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "path": "^0.12.7",
-    "socket.io": "^4.7.4" // KHÔNG CÓ DẤU PHẨY SAU DÒNG NÀY!
+    "socket.io": "^4.7.4" 
   }
 }
